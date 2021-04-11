@@ -127,37 +127,43 @@
 # 
 # For any $(t,s,x) \in \mathcal{T} \times \bar{\mathcal{T}}\times S$ we define $(\varepsilon_m, \varepsilon_\gamma, \varepsilon_P)$
 # 
-# $$\begin{align} 
-#  \varepsilon_m(s,x)& =  G[m,\pi](s,x) - m(s,x) - \bar{m}_0(s,x),\\
+# ```{admonition} Errors
+# 
+# $$\begin{cases} 
+# \varepsilon_\pi(t,x) & =  (\ell[\pi] +  \ell^\star[-A^\star P - S^\star u])(t,x) - \langle \pi(t,x),(A^\star P + S^\star u)(t,x) \rangle,\\[.5em]
+#  \varepsilon_m(s,x)& =  G[m,\pi](s,x) - m(s,x) - \bar{m}_0(s,x),\\[.5em]
 #  \varepsilon_\gamma(s) & = m(s) - \text{proj}_{\partial F^\star[\gamma](s)}(m(s)),
-# \\
+# \\[.5em]
 # \varepsilon_P(t) & =   Q[m,\pi](t) - \text{proj}_{ \partial \phi^\star[P]}(Q[m,\pi](t)).
-# \end{align}$$
+# \end{cases}$$
+# ```
+# 
+# 
 # 
 # In our case we have that
 # 
-# $$\begin{equation}
-# F^\star[\gamma] = \begin{cases} 0 & \text{ if } \gamma < 0,  \\ 
+# $$\begin{align}
+# F^\star[\gamma] &= \begin{cases} 0 & \text{ if } \gamma < 0,  \\ 
 # \|\gamma\|^2 & \text{ if } \gamma \in [0,\eta], \\
 # \eta & \text{ if } \gamma >\eta,
-# \end{cases}, \quad 
-# \phi^\star[P] = \begin{cases} \langle D_{min} ,P \rangle - D_0(D_{min} + \bar{D})^2/2 & \text{ if } P<D_0(D_{min} + \bar{D}), \\
+# \end{cases}, \\[1em] 
+# \phi^\star[P] & = \begin{cases} \langle D_{min} ,P \rangle - D_0(D_{min} + \bar{D})^2/2 & \text{ if } P<D_0(D_{min} + \bar{D}), \\
 # \|P\|^2/(2D_0) - \langle \bar{D} ,P \rangle & \text{ if } D_0(D_{min} + \bar{D}) \leq P \leq D_0(D_{max} + \bar{D}),\\
 # \langle D_{max} ,P \rangle - D_0(D_{max} + \bar{D})^2/2 & \text{ if } D_0(D_{max} + \bar{D}) \leq P.
 # \end{cases}
-# \end{equation}$$
+# \end{align}$$
 # 
 # Thus
 # 
-# $$\begin{equation}
-# \partial F^\star[\gamma] = \nabla  F^\star[\gamma] = \begin{cases} 0 & \text{ if } \gamma < 0,  \\
+# $$\begin{align}
+# \partial F^\star[\gamma] & = \nabla  F^\star[\gamma] = \begin{cases} 0 & \text{ if } \gamma < 0,  \\
 # \gamma & \text{ if } \gamma \in [0,\eta], \\
 # \eta & \text{ if } \gamma > \eta, 
-# \end{cases}, \quad \partial \phi^\star[P] = \nabla \phi^\star[P] = \begin{cases} D_{min} & \text{ if } P<D_0(D_{min} + \bar{D}), \\
+# \end{cases}, \\[1em] \partial \phi^\star[P] & = \nabla \phi^\star[P] = \begin{cases} D_{min} & \text{ if } P<D_0(D_{min} + \bar{D}), \\ 
 # P/D_0 - \bar{D} & \text{ if } D_0(D_{min} + \bar{D}) \leq P \leq D_0(D_{max} + \bar{D}),\\
 #  D_{max} & \text{ if } D_0(D_{max} + \bar{D}) \leq P.
 # \end{cases}
-# \end{equation}
+# \end{align}
 # $$
 # 
 # and one can write

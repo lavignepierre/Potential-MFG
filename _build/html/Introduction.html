@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerics for potential mean field games with hard constraints &#8212; Numerics for potential mean field games</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chambolle-Pock" href="Chambolle-Pock-MFGC-Constraint.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Numerics for potential mean field games</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Numerics for potential mean field games with hard constraints
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Algorithm for MFGC
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chambolle-Pock-MFGC-Constraint.html">
+   Chambolle-Pock
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chambolle-Pock-Bregman-MFGC-Constraint.html">
+   Chambolle-Pock-Bregman
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ADMM-MFGC-Constraint.html">
+   ADMM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ADMG-MFGC-Constraint.html">
+   ADM-G
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gallery
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Convergence-Constraint.html">
+   Convergence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Plots-MFG-Constraint.html">
+   Plot MFG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Plots-MFGC-Constraint.html">
+   Plot MFGC
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Introduction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Introduction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scaling">
+   Scaling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scaled-primal-and-dual-problems">
+   Scaled primal and dual problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notations">
+     Notations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qualification">
+     Qualification
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="numerics-for-potential-mean-field-games-with-hard-constraints">
+<h1>Numerics for potential mean field games with hard constraints<a class="headerlink" href="#numerics-for-potential-mean-field-games-with-hard-constraints" title="Permalink to this headline">¶</a></h1>
+<p>We are in a potential case, that is to say the set of solutions to the mean field game system is linked with the set of solutions to a primal and dual potential problems. We define <span class="math notranslate nohighlight">\(\mathcal{T} = \{0,\ldots,T-1\}\)</span>, <span class="math notranslate nohighlight">\(\bar{\mathcal{T}} = \{0,\ldots,T\}\)</span> and <span class="math notranslate nohighlight">\(S=\{0,\ldots,n\}\)</span>.
+For any <span class="math notranslate nohighlight">\((t,s,x) \in \mathcal{T} \times \bar{\mathcal{T}}\times S\)</span>, the underlying mean field game system is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation} \begin{cases} \begin{array}{cl} \text{(i)} &amp;
+\begin{cases}
+\begin{array}{rl}
+u(t,x) = &amp; \inf_{\rho \in \Delta(S)} \ell(t,x,\rho)\Delta_t + \gamma(t,x)\Delta_t + \sum_{y \in S} \rho(y)(\alpha(t,x,y)P(t)\Delta_t + u(t+1,y)), \\
+u(T,x) = &amp; \gamma(T,x),
+\end{array}
+\end{cases}
+\\[2em]
+\text{(ii)} &amp; \quad \pi(t,x, \cdot) \in \ \underset{\rho  \in \Delta(S)}{\text{arg min}}\ \ell(t,x,\rho)\Delta_t + \sum_{y \in S} \rho(y)(P(t) \alpha(t,x,y) \Delta_t + u(t+1,y)),\\[1.5em]
+\text{(iii)} &amp;
+\begin{cases}
+\begin{array}{rl}
+m(t+1,x)= &amp; \sum_{y \in S} m(t,y) \pi(t,y,x), \\
+m(0,x)= &amp; m_0(x),
+\end{array}
+\end{cases}
+\\[2em]
+\text{(iv)} &amp; \quad  \  {\displaystyle \gamma(s) \in \partial F (s,m(s)) }, \\[1.5em]
+\text{(v)} &amp; \quad  \  {\displaystyle P(t) \in \partial \phi \Big(t,\sum_{(x,y) \in S^2}\pi(t,x,y) m(t,x) \alpha(t,x,y) \Big) },
+\end{array}
+\end{cases}
+\end{equation}
+\end{split}\]</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>Here we provide the data of the problem we choose to solve.</p>
+<ul class="simple">
+<li><p><strong>Running cost</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\ell(t,x,\rho) = \sum_{y\in S} \rho(t,x,y)\beta(t,x,y), \quad \ell^\star(t,x,b) =  \max_{y\in S} b(t,x,y) - \beta(t,x,y), \quad \beta(t,x,y) = \left((y-x) \frac{\Delta_x}{\Delta_t}\right)^2/4,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is a displacement cost</p>
+<ul class="simple">
+<li><p><strong>Congestion</strong> :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F[m] = \|m\|^2/2 + \langle m, \nu \rangle + \chi_{[0,\eta]}(m),\]</div>
+<ul class="simple">
+<li><p><strong>Price</strong> :</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \phi[D] = \frac{D_0}{2}\|D+\bar{D}\|^2 + \chi_{[D_{min},D_{max}]}(D),\]</div>
+<ul class="simple">
+<li><p><strong>weights</strong> <span class="math notranslate nohighlight">\(\alpha\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\alpha(t,x,y) =  (y-x) \frac{\Delta_x}{\Delta_t},\]</div>
+<p>for any <span class="math notranslate nohighlight">\((t,x,y) \in \mathcal{T} \times S \times S\)</span>.</p>
+</div>
+<div class="section" id="scaling">
+<h2>Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h2>
+<p>In this subsection we explicit how the problem is scale in the numerical exemples. This section can be skipped in a first time. We set <span class="math notranslate nohighlight">\(\Delta_t = 1/T\)</span> and <span class="math notranslate nohighlight">\(\Delta_x = 1/n\)</span>. We define a scalar product associated to each variable. For the primal variables we define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} 
+\langle m_1, m_2 \rangle_{m} &amp;= \sum_{t = 0}^{T-1} \Delta_x \Delta_t \langle m_1(t), m_2(t) \rangle + \Delta_x \langle m_1(T), m_2(T) \rangle, \\
+\langle w_1, w_2 \rangle_{w} &amp;= \Delta_x \Delta_t \langle w_1, w_2 \rangle.
+\end{align}\end{split}\]</div>
+<p>For the dual variables we define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\langle u_1, u_2 \rangle_{u}  &amp;= \Delta_x \langle u_1(0), u_2(0) \rangle + \sum_{t = 1}^{T} \Delta_x \Delta_t \langle u_1(t), u_2(t) \rangle, \\
+\langle \gamma_1, \gamma_2 \rangle_{\gamma}  &amp;= \langle \gamma_1, \gamma_2 \rangle_{m},\\
+\langle P_1, P_2 \rangle_{P}  &amp;= \Delta_t \langle P_1, P_2 \rangle.
+\end{align}\end{split}\]</div>
+</div>
+<div class="section" id="scaled-primal-and-dual-problems">
+<h2>Scaled primal and dual problems<a class="headerlink" href="#scaled-primal-and-dual-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notations">
+<h3>Notations<a class="headerlink" href="#notations" title="Permalink to this headline">¶</a></h3>
+<p>We have the following qualification result. For any function <span class="math notranslate nohighlight">\(f\)</span>, we define <span class="math notranslate nohighlight">\(f^\star\)</span> its fenchel transform and <span class="math notranslate nohighlight">\(f^{\circ}\)</span> its fenchel transform for the normalized scalar product. We use the same notation to denote the adjoint computed with the classical scalar product and the normalized scalar product.</p>
+<p>We have that
+$<span class="math notranslate nohighlight">\( A^\star[P](t,x,y) = \alpha(t,x,y)P(t), \qquad S^\star[u](t,x,y) = u(t+1,y).\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathcal{A} = \begin{pmatrix} 0 &amp; 0 &amp; A\Delta_x &amp; -id\\
+- I_0 - I/\Delta_t - I_T/\Delta_t &amp; 0 &amp; S/\Delta_t &amp; 0\\
+id &amp; -id &amp; 0 &amp; 0 \end{pmatrix}.\end{split}\]</div>
+<p>The adjoint operator is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathcal{A}^\circ  = \begin{pmatrix} 0 &amp; - ( I_0 + I/\Delta_t + I_T/\Delta_t)^\circ &amp; id\\
+0 &amp; 0 &amp; -id \\
+A^\circ \Delta_x &amp; S^\circ/\Delta_t  &amp; 0 \\
+-id &amp; 0 &amp; 0 \end{pmatrix} = \begin{pmatrix} 0 &amp; -(I_0/\Delta_t + I/\Delta_t + I_T) &amp; id\\
+0 &amp; 0 &amp; -id \\
+A^\star &amp; S^\star/\Delta_t &amp; 0 \\
+-id &amp; 0 &amp; 0\end{pmatrix}.\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_0[m] = \begin{cases} m(0) &amp; \text{if } t=0\\
+0 &amp; \text{otherwise } \end{cases}, \quad I[m](t) = \begin{cases} m(t) &amp; \text{if } 0&lt;t&lt;T\\
+ 0 &amp; \text{otherwise } \end{cases}, \quad I_T[m] = \begin{cases} m(T) &amp; \text{if } t=T \\
+0 &amp; \text{otherwise } \end{cases}.\end{split}\]</div>
+</div>
+<div class="section" id="qualification">
+<h3>Qualification<a class="headerlink" href="#qualification" title="Permalink to this headline">¶</a></h3>
+<p>We have that</p>
+<div class="admonition-qualification admonition">
+<p class="admonition-title">Qualification</p>
+<div class="math notranslate nohighlight">
+\[ \min_{(m_1,m_2,w,d) \in \mathcal{C}}
+\mathcal{F}(m_1,m_2,w,D) + \mathcal{G}(\mathcal{A}(m_1,m_2,w,D)) = \max_{(P,u,\gamma) \in \mathcal{K}} -\mathcal{F}^\circ(-\mathcal{A}^\circ(P,u,\gamma)) -  \mathcal{G}^\circ(P,u,\gamma).\]</div>
+</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align} \mathcal{F}(m_1,m_2,w,D)  &amp; = \sum_{(t,x) \in \mathcal{T} \times S} \tilde{\ell}[m_1,w](t,x) \Delta_t \Delta_x + \sum_{t \in \mathcal{T}} \phi[D](t)\Delta_t + F[m_2](t)\Delta_t \Delta_x + F[m_2](T)\Delta_x,\\
+\mathcal{G}(y_1,y_2,y_3)  &amp; = \chi(y_1)  + \chi(y_2 + \bar{m}_0) + \chi(y_3). \end{align}\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align}  \mathcal{F}^\circ(a_1,a_2,b,c)  &amp; = \sum_{t \in \bar{\mathcal{T}}} \tilde{\ell}^\star[a_1,b](t,x) \Delta_t \Delta_x +  \sum_{t \in \mathcal{T}} \phi^\star[c](t)\Delta_t + F^\star[a_2](t)\Delta_t \Delta_x + F^\star[a_2](T)\Delta_x,\\
+\mathcal{G}^\circ(P,u,\gamma)  &amp; = - \langle u(0,\cdot), m_0(\cdot)\rangle,\end{align}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>For any <span class="math notranslate nohighlight">\((t,s,x) \in \mathcal{T} \times \bar{\mathcal{T}}\times S\)</span> we define <span class="math notranslate nohighlight">\((\varepsilon_m, \varepsilon_\gamma, \varepsilon_P)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} 
+ \varepsilon_m(s,x)&amp; =  G[m,\pi](s,x) - m(s,x) - \bar{m}_0(s,x),\\
+ \varepsilon_\gamma(s) &amp; = m(s) - \text{proj}_{\partial F^\star[\gamma](s)}(m(s)),
+\\
+\varepsilon_P(t) &amp; =   Q[m,\pi](t) - \text{proj}_{ \partial \phi^\star[P]}(Q[m,\pi](t)).
+\end{align}\end{split}\]</div>
+<p>In our case we have that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation}
+F^\star[\gamma] = \begin{cases} 0 &amp; \text{ if } \gamma &lt; 0,  \\ 
+\|\gamma\|^2 &amp; \text{ if } \gamma \in [0,\eta], \\
+\eta &amp; \text{ if } \gamma &gt;\eta,
+\end{cases}, \quad 
+\phi^\star[P] = \begin{cases} \langle D_{min} ,P \rangle - D_0(D_{min} + \bar{D})^2/2 &amp; \text{ if } P&lt;D_0(D_{min} + \bar{D}), \\
+\|P\|^2/(2D_0) - \langle \bar{D} ,P \rangle &amp; \text{ if } D_0(D_{min} + \bar{D}) \leq P \leq D_0(D_{max} + \bar{D}),\\
+\langle D_{max} ,P \rangle - D_0(D_{max} + \bar{D})^2/2 &amp; \text{ if } D_0(D_{max} + \bar{D}) \leq P.
+\end{cases}
+\end{equation}\end{split}\]</div>
+<p>Thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation}
+\partial F^\star[\gamma] = \nabla  F^\star[\gamma] = \begin{cases} 0 &amp; \text{ if } \gamma &lt; 0,  \\
+\gamma &amp; \text{ if } \gamma \in [0,\eta], \\
+\eta &amp; \text{ if } \gamma &gt; \eta, 
+\end{cases}, \quad \partial \phi^\star[P] = \nabla \phi^\star[P] = \begin{cases} D_{min} &amp; \text{ if } P&lt;D_0(D_{min} + \bar{D}), \\
+P/D_0 - \bar{D} &amp; \text{ if } D_0(D_{min} + \bar{D}) \leq P \leq D_0(D_{max} + \bar{D}),\\
+ D_{max} &amp; \text{ if } D_0(D_{max} + \bar{D}) \leq P.
+\end{cases}
+\end{equation}
+\end{split}\]</div>
+<p>and one can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+ \varepsilon_\gamma(s) &amp; = m(s) - \nabla  F^\star[\gamma],
+\\
+\varepsilon_P(t) &amp; = Q[m,\pi](t) - \nabla \phi^\star[P].
+\end{align} \end{split}\]</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="Chambolle-Pock-MFGC-Constraint.html" title="next page">Chambolle-Pock</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Pierre Lavigne<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

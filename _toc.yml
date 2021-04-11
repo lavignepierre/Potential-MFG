@@ -1,0 +1,17 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: Introduction
+
+- part: Algorithm for MFGC
+  chapters:
+    - file: Chambolle-Pock-MFGC-Constraint
+    - file: Chambolle-Pock-Bregman-MFGC-Constraint
+    - file: ADMM-MFGC-Constraint
+    - file: ADMG-MFGC-Constraint
+
+- part: Gallery
+  chapters:
+    - file: Convergence-Constraint
+    - file: Plots-MFG-Constraint
+    - file: Plots-MFGC-Constraint

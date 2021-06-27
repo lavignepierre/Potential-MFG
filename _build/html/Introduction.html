@@ -247,8 +247,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#qualification">
-     Qualification
+    <a class="reference internal nav-link" href="#duality">
+     Duality
     </a>
    </li>
   </ul>
@@ -346,14 +346,16 @@ m(0,x)= &amp; m_0(x),
 <div class="section" id="notations">
 <h3>Notations<a class="headerlink" href="#notations" title="Permalink to this headline">¶</a></h3>
 <p>We have the following qualification result. For any function <span class="math notranslate nohighlight">\(f\)</span>, we define <span class="math notranslate nohighlight">\(f^\star\)</span> its fenchel transform and <span class="math notranslate nohighlight">\(f^{\circ}\)</span> its fenchel transform for the normalized scalar product. We use the same notation to denote the adjoint computed with the classical scalar product and the normalized scalar product.</p>
-<p>We have that
-$<span class="math notranslate nohighlight">\( A^\star[P](t,x,y) = \alpha(t,x,y)P(t), \qquad S^\star[u](t,x,y) = u(t+1,y).\)</span>$</p>
+<p>We denote</p>
+<div class="math notranslate nohighlight">
+\[ A^\star[P](t,x,y) = \alpha(t,x,y)P(t), \qquad S^\star[u](t,x,y) = u(t+1,y).\]</div>
+<p>and</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \mathcal{A} = \begin{pmatrix} 0 &amp; 0 &amp; A\Delta_x &amp; -id\\
 - I_0 - I/\Delta_t - I_T/\Delta_t &amp; 0 &amp; S/\Delta_t &amp; 0\\
 id &amp; -id &amp; 0 &amp; 0 \end{pmatrix}.\end{split}\]</div>
-<p>The adjoint operator is given by</p>
+<p>The adjoint operator of <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \mathcal{A}^\circ  = \begin{pmatrix} 0 &amp; - ( I_0 + I/\Delta_t + I_T/\Delta_t)^\circ &amp; id\\
@@ -370,9 +372,9 @@ A^\star &amp; S^\star/\Delta_t &amp; 0 \\
  0 &amp; \text{otherwise } \end{cases}, \quad I_T[m] = \begin{cases} m(T) &amp; \text{if } t=T \\
 0 &amp; \text{otherwise } \end{cases}.\end{split}\]</div>
 </div>
-<div class="section" id="qualification">
-<h3>Qualification<a class="headerlink" href="#qualification" title="Permalink to this headline">¶</a></h3>
-<p>We have that</p>
+<div class="section" id="duality">
+<h3>Duality<a class="headerlink" href="#duality" title="Permalink to this headline">¶</a></h3>
+<p>Under qualification assumption we have the following duality result</p>
 <div class="admonition-qualification admonition">
 <p class="admonition-title">Qualification</p>
 <div class="math notranslate nohighlight">

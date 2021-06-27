@@ -75,15 +75,18 @@
 # ### Notations
 # We have the following qualification result. For any function $f$, we define $f^\star$ its fenchel transform and $f^{\circ}$ its fenchel transform for the normalized scalar product. We use the same notation to denote the adjoint computed with the classical scalar product and the normalized scalar product.
 # 
-# We have that
+# We denote
+# 
 # $$ A^\star[P](t,x,y) = \alpha(t,x,y)P(t), \qquad S^\star[u](t,x,y) = u(t+1,y).$$
+# 
+# and 
 # 
 # $$
 # \mathcal{A} = \begin{pmatrix} 0 & 0 & A\Delta_x & -id\\
 # - I_0 - I/\Delta_t - I_T/\Delta_t & 0 & S/\Delta_t & 0\\
 # id & -id & 0 & 0 \end{pmatrix}.$$
 # 
-# The adjoint operator is given by
+# The adjoint operator of $\mathcal{A}$ is given by
 # 
 # $$
 # \mathcal{A}^\circ  = \begin{pmatrix} 0 & - ( I_0 + I/\Delta_t + I_T/\Delta_t)^\circ & id\\
@@ -101,9 +104,9 @@
 #  0 & \text{otherwise } \end{cases}, \quad I_T[m] = \begin{cases} m(T) & \text{if } t=T \\
 # 0 & \text{otherwise } \end{cases}.$$
 # 
-# ### Qualification
+# ### Duality
 # 
-# We have that
+# Under qualification assumption we have the following duality result
 # 
 # ```{admonition} Qualification
 # 
